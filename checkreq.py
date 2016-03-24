@@ -1,4 +1,4 @@
-#!/usr/bin/env python 
+#!/usr/bin/env python
 
 # req.yml file should be added to the directory from where this script needs to be called
 # *** sample content of req.yml file ***
@@ -11,10 +11,12 @@
 
 # Python 2 and 3:
 from __future__ import print_function
+from __future__ import absolute_import
 import os
 import subprocess
 import yaml
 import re
+from six.moves import input
 
 
 def main():
@@ -33,7 +35,7 @@ def main():
                     sr = re.search('^-r.*.txt', item)
                     if sr:
                         req_list.remove(item)
-                req_list = filter(None, req_list)
+                req_list = [_f for _f in req_list if _f]
                 listed_req = listed_req | set(req_list)
             missed_list = listed_req - installed_req
             if missed_list:
