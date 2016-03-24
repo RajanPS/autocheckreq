@@ -1,0 +1,2 @@
+path: '.'
+requirements: ['requirements_dev.txt', 'requirements_prod.txt']
