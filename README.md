@@ -5,4 +5,5 @@ This script automatically checks for missing requirements to be installed based 
 2. mention the requirement files to be considered and path of it in the req.yml
 3. save the script some where inside your project directory
 4. auto call the script using autoenv in the project root from .env file
-5. missing requirements will be listed and you can either install them or ignore
+5. script will be called each time when you cd into the root folder
+5. missing requirements will be listed if any and you can either install them or ignore
